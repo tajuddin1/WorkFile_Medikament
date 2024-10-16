@@ -9,14 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <nav class="navbar py-3">
-        <div class="header-top container">
+        <div class="header-top container d-none d-lg-flex">
             <div class="d-flex align-items-center gap-2">
                 <span class="mb-0 d-flex align-items-center gap-2">Doprava zdarma od <span class="color-primary">79€</span> <iconify-icon class="color-primary" icon="fa6-solid:truck"></iconify-icon></span>
                 <span class="mb-0"><a href="#" class="d-flex align-items-center gap-2 text-decoration-none">Mediblog <iconify-icon icon="fa:book"></iconify-icon></a></span>
@@ -26,12 +27,12 @@
                 <span class="mb-0 d-flex align-items-center gap-2">alebo <a href="#" class="d-flex align-items-center gap-2 text-decoration-none">info@medikament.sk</a></span>
             </div>
         </div>
-        <div class="container d-block pt-3">
+        <div class="container d-block pt-lg-3">
             <div class="row">
-                <div class="col-3">
-                    <a class="navbar-brand" href="#"><img src="image/medikamentsk-logo.jpg" alt="medikamentsk-logo"></a>
+                <div class="col-6 col-md-3 d-flex align-items-center">
+                    <a class="navbar-brand" href="#"><img class="w-100" src="image/medikamentsk-logo.jpg" alt="medikamentsk-logo"></a>
                 </div>
-                <div class="col-6">
+                <div class="col-md-5 col-xl-6 d-none d-md-block ">
                     <div class="search-box-wrapper w-100">
                         <form class="search-box d-flex align-items-center">
                             <input type="text" class="form-control border-0 rounded-0" placeholder="Vyhľadávanie">
@@ -41,20 +42,27 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="d-flex align-items-center justify-content-center gap-3">
-                        <a href="#" class="user-btn-wrapper w-50 d-flex align-items-center justify-content-center text-decoration-none">
-                            <iconify-icon class="user-icon" icon="fa:user"></iconify-icon>
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="d-flex align-items-center justify-content-end justify-content-lg-center gap-md-3">
+                        <div class="d-md-none">
+                            <button type="button" class="btn src-btn border-0 px-2 rounded-0 d-flex align-items-center justify-content-center">
+                                <iconify-icon class="fss-same color-primary" icon="fa:search"></iconify-icon>
+                            </button>
+                        </div>
+                        <a href="#" class="user-btn-wrapper col-lg-6 px-2 mx-2 mx-md-0 d-flex align-items-center justify-content-center text-decoration-none">
+                            <iconify-icon class="fss-same user-icon" icon="fa:user"></iconify-icon>
                         </a>
-                        <a href="#" class="cart-btn-wrapper py-2 px-3 w-50 d-flex align-items-center justify-content-center gap-2 text-decoration-none">
-                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon>
-                            (prázdny)
+                        <a href="#" class="cart-btn-wrapper py-2 px-2 mx-2 mx-md-0 col-lg-6 d-flex align-items-center justify-content-center gap-2 text-decoration-none">
+                            <iconify-icon class="fss-same cart-icon" icon="solar:cart-3-bold"></iconify-icon>
+                            <span class="d-none d-lg-block">(prázdny)</span>
                         </a>
+                        <button class="navbar-toggler d-flex d-lg-none border-0 px-2 pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            <span class="fss-same navbar-toggler-icon fs-3"></span>
+                        </button>
                     </div>
                 </div>
-
-                <div class="menu-wrapper mt-3">
-                    <ul class="list-unstyled d-flex align-items-center justify-content-center mb-0">
+                <div class="menu-wrapper mt-3 d-none d-lg-block">
+                    <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-center mb-0">
                         <li>
                             <a href="#" class="text-decoration-none navItems colored px-4 py-2 d-block fw-semibold">AKCIE</a>
                         </li>
@@ -87,47 +95,44 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">latest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
+                <div class="offcanvas offcanvas-start d-flex d-lg-none pt-3" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="menu-wrapper mt-3">
+                        <ul class="list-unstyled d-flex flex-column justify-content-center mb-0">
+                            <li>
+                                <a href="#" class="text-decoration-none navItems colored px-4 py-2 d-block fw-semibold">AKCIE</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Imunita</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Domácnosť</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Zdravie a lieky</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Doplnky stravy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Kozmetika</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Matka a dieťa</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Šport</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Zdravotné pomôcky</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Veterina</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </nav>
     <section class="hero-slider py-3">
@@ -176,7 +181,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="pb-3">
         <div class="container">
             <ul class="nav nav-tabs border-0 d-flex align-items-center gap-2 mb-5" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -197,16 +202,669 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="latest-tab-pane" role="tabpanel" aria-labelledby="latest-tab" tabindex="0">
-                    tab 1
+                    <ul id="productSlider1" class="owl-carousel owl-theme list-unstyled">
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/jamieson-kvercetin-vit-c-500-mg-45-kapsul.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">JAMIESON KVERCETÍN s vitamínom C 500 mg... </h5></a>
+                                <p class="product-desc text-center">Výživový doplnok</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">19,25 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/corega-tabs-pro-cleanser-orthodontics-30-tabliet.webp" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">COREGA Tabs Pro Cleanser Orthodontics..</h5></a>
+                                <p class="product-desc text-center">Cistiace tablety na ortodontickáé pomôcky Pro Cleanser Orthodontics.</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">5,44 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/cerave-sa-cistiaca-zjemnujuca-emulzia-na-suchu-a-drsnu-pokozku-473-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">CeraVe SA CISTIACA ZJEMÑUJÚCA EMULZIA na...</h5></a>
+                                <p class="product-desc text-center">Zjemnujúca cistiaca emulzia na suchú, drsnú pokozku s nerovnomerným povrchom. Cistí a</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">12,76 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/apateka-imuno-vitamin-vitamin-c-d-zinok-60-kapsul.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">Apateka IMUNO Vitamín - vitamín C + D +...</h5></a>
+                                <p class="product-desc text-center">Vitamín C (askorban sodny), vitamín D3 (cholekalciferol), zinok (citrát zinoănaty), celulóza</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">10,75 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/covirin-kid-teen-kapsuly-120-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">COVIRIN KID & TEEN kapsuly 120 ks</h5></a>
+                                <p class="product-desc text-center">COVIRIN kid & teen je urcený na komplexnú podporu imunitného systému a ochranu buniek v case COVID-</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">30,32 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/sideral-folic-30-mg-prasky-20-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">SIDERAL FOLIC 30 mg prásky 20 ks</h5></a>
+                                <p class="product-desc text-center">Prípravok pre dopInenie Zeleza, ktoré nedráidi zazívací trakt. DopIneny o kyselinu listovú pre</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">14,74 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/serelys-one-kapsuly-30-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">Sérélys One kapsuly 30 ks</h5></a>
+                                <p class="product-desc text-center">Sérélys® ONE je výzivový doplnok s obsahom výtazkov z pelového zrna, podporujúci</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">21,58 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/lejdyvita-2-budem-mama-kapsuly-30-ks.webp" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">LejdyVita 2 Budem mama kapsuly 30 ks</h5></a>
+                                <p class="product-desc text-center">LejdyVita® 2 Budem mama je vivový doplnok pre tehotné Zeny. Jedinené zlozenie s komplexom</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">16,85 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="tab-pane fade" id="recommend-tab-pane" role="tabpanel" aria-labelledby="recommend-tab" tabindex="0">
-                    tab 2
+                    <ul id="productSlider2" class="owl-carousel owl-theme list-unstyled">
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/lactacyd-pharma-antibakterialny-intimna-hygiena-1x250-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">LACTACYD Pharma ANTIBAKTERIALNY gél 250 ml</h5></a>
+                                <p class="product-desc text-center">Lactacyd Pharma s atibakteriálnou prísadou je
+                                    prípravok pre intímnu hygienu. Pomáha zabezpecit</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">6,00 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/deflagyn-vaginalny-gel-150-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">DeflaGyn vaginálny gél 150 ml</h5></a>
+                                <p class="product-desc text-center">Vaginálny gél na podporu remisie po nejasnom
+                                    cervikálnom stere. Balenie obsahuje 150 ml</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">39,87 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/muconasal-plus-aer-nao-flskl-1x10-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">MUCONASAL PLUS sprej 10 ml</h5></a>
+                                <p class="product-desc text-center">Liek obsahuje liecivo tramazolíniumchlorid, ktoré
+                                    zuluje cievy a tým zmensuje opuch nosovej sliznice,</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">5,14 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/bioderma-atoderm-intensive-gel-moussant-1x1-l.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">BIODERMA Atoderm Intensive sprchový gél 1 l</h5></a>
+                                <p class="product-desc text-center">Sprchovy gél pre kazdodennú starostlivost pri liebe
+                                    atopického ekzému. Kazdodenná upokojujúca a</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">12,92 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/rosalgin-easy-sol-vag-140-ml-1x5-fl-s-aplik-5x140-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">ROSALGIN EASY roztok na vaginálny výplach...</h5></a>
+                                <p class="product-desc text-center">Liek je vaginalny roztok obsahujuci liecivo
+                                    benzydamíniumchlorid, ktorý má pri miestnej</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">9,45 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/lactacyd-pharma-antimykoticky-intimna-hygiena-1x250-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">LACTACYD Pharma ANTIMYKOTICKY gél 250 ml</h5></a>
+                                <p class="product-desc text-center">Lactacyd Pharma je pripravok pre intímnu hygienu.
+                                    Viac na adcc.sk</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">6,64 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/gs-cemio-au-block-30-kapsul.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">Cemio AU! BLOCK kapsuly 30 ks</h5></a>
+                                <p class="product-desc text-center">Na diétny reim pri bolesti nervového pôvodu: pri
+                                    bolesti chrbtice (vertebrogénny syndróm), pri útlaku</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">9,90 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/femibion-2-tehotenstvo-tbl-28-cps-28-kys-listova-vitaminy-mineraly-dha-1x56-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">Femibion 2 Tehotenstvo 28 tabliet...</h5></a>
+                                <p class="product-desc text-center">Vyzivový dopInok je urcený pre tehotné Zeny od 13.
+                                    do 40. tzdña tehotenstva. Balenie obsahuje 28</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">18,59 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/avilut-3-forte-recordati-90-cps.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">AVILUT 3-forte Recordati kapsuly 90 ks</h5></a>
+                                <p class="product-desc text-center">Vyzivový doplnok s DHA a EPA, ktoré prispievajú k
+                                    udrianiu dobrého zraku</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">26,86 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/covirin-kapsuly-90-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">COVIRIN kapsuly 90 ks</h5></a>
+                                <p class="product-desc text-center">Vyzivový dopInok prispieva k správnemu fungovaniu imunitného systému, zachovaniu zdravých slizníc,</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">27,45 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/cbd-vincit-balzam-60mg-6ml-1x6ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">CBD Vincit balzam 60 mg 6 ml</h5></a>
+                                <p class="product-desc text-center">Balzam na pery s obsahom CBD. 100% prírodny.</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">10,82 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/cbd-vincit-kvapky-5-10-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">CBD Vincit kvapky 5% 10 ml</h5></a>
+                                <p class="product-desc text-center">5% prirodné kvapky s obsahom CBD. Obsahuju
+                                    kanabisovú ivicu, extrahovanú pomocou CO2, z</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">31,13 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="tab-pane fade" id="discount-tab-pane" role="tabpanel" aria-labelledby="discount-tab" tabindex="0">
-                    tab 3
+                    <ul id="productSlider3" class="owl-carousel owl-theme list-unstyled">
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/muconasal-plus-aer-nao-flskl-1x10-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">MUCONASAL PLUS sprej 10 ml</h5></a>
+                                <p class="product-desc text-center">Liek obsahuje liecivo tramazolíniumchlorid, ktoré
+                                    zuzuje cievy a tým zmensuje opuch nosovej sliznice,</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">5,14 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/panadol-ultra-rapide-tbl-eff-strip-lam-1x24-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">Panadol ULTRA RAPIDE sumivé tablety 24 ks</h5></a>
+                                <p class="product-desc text-center">Liekom je analgetikum urcené na timenie stredne silnej az silnej bolesti. Tablety sú odporucené na</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">8,55 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/detralex.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">DETRALEX tablety 60 ks</h5></a>
+                                <p class="product-desc text-center">Bioflavonoidy sú liedivá lieku stabilizujúce kapiláry.
+                                    Liek sa pouzíva u dospelych na liebu zilovo-</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">15,84 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/paralen-500-tbl-500-mg-blisal-pvc-1x24-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">PARALEN 500 mg tablety 24 ks</h5></a>
+                                <p class="product-desc text-center">Paracetamol, liedivo obsiahnuté v lieku, pôsobí proti
+                                    bolesti a znizuje zvýsenú telesnú teplotu. Liek je</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">1,81 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/dorithricin-pas-ord-1x20-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">Dorithricin pastilky 20 ks</h5></a>
+                                <p class="product-desc text-center">Liek obsahuje 3 liecivá: Tyrotricín je antibiotikum
+                                    hodné na lokálne pouzitie (v mieste zápalu a bolesti</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">6,15 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/otrivin-menthol-01-aer-nao-flhdpe-s-davkovacom-1x10-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">Otrivin Menthol 0,1% sprej 10 ml</h5></a>
+                                <p class="product-desc text-center">Liek obsahuje xylometazoliniumchlorid, je to nosový
+                                    dekongestant (nizuje nadmerné prekrvenie nosovej</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">6,19 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/hipp-babysanft-cistiace-vlhcene-obrusky-ultra-sensitive-aqua-10-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">HiPP BabySANFT VIhiené obrúsky ultra...</h5></a>
+                                <p class="product-desc text-center"></p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">1,10 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/acylpyrin-tbl-500-mg-blis-al-pvc-1x10-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">ACYLPYRIN 500 mg tablety 10 ks</h5></a>
+                                <p class="product-desc text-center">Liek s obsahom kyseliny acetylsalicylovej úcinne timi
+                                    bolesti a efektívne znizuje teplotu, vo vyssích dávkach</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">1,46 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihneď k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="tab-pane fade" id="bestsale-tab-pane" role="tabpanel" aria-labelledby="bestsale-tab" tabindex="0">
-                    tab 4
+                    <ul id="productSlider4" class="owl-carousel owl-theme list-unstyled">
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/ducray-neoptide-expert-serum-proti-vypadavaniu-a-na-rast-vlasov-2x50-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">DUCRAY NEOPTIDE EXPERT  SÉRUM proti….</h5></a>
+                                <p class="product-desc text-center">NEOPTIDE EXPERT Sérums dvojitým úcinkom
+                                    pomáha v boji proti chronickému vypadávaniu vlasov</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">54,34 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">expedícia 3 - 4 pracovné dni</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/ducray-creastim-reactiv-roztok-proti-vypadavaniu-vlasov-60-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">DUCRAY CREASTIM REACTIV
+                                    roztok proti...</h5></a>
+                                <p class="product-desc text-center">Ducray Creastim roztok proti vypadávaniu vlasov (pri
+                                    strese, diéte, po pôrode). Urychluje rast vlasov.</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">49,30 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">expedícia 3 - 4 pracovné dni</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/ducray-anacaps-expert-kapsuly-90-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">DUCRAY ANACAPS EXPERT
+                                    kapsuly 90 ks</h5></a>
+                                <p class="product-desc text-center">Vyzivový dopinok obsahujúci aminokyseliny, vytaky
+                                    z rastlín, vitamíny a minerály. Obsahuje: výtazok z</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">46,25 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">expedícia 3 - 4 pracovné dni</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/la-roche-cicaplast-b5-serum-30-ml.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">La roche cicaplast B5 sérum 30 ml</h5></a>
+                                <p class="product-desc text-center"></p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">32,34 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihned k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="product-card border p-3 pb-4 d-flex flex-column">
+                                <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/veroval-dotykovy-infracerveny-teplomer-duoscan-1x1-ks.jpg" alt=""></a>
+                                <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">Veroval infračervený dotykový teplomer</h5></a>
+                                <p class="product-desc text-center">Infracerveny dotykov teplomer je urceny na rýchle a
+                                    jednoduché meranie telesnej teploty v uchu alebo na</p>
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                        <h4 class="product-price color-primary">31,50 €</h4>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                        <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center">
+                                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon> 
+                                            Vložiť do košíka
+                                        </button>
+                                        <span class="availability_status">Ihned k odoslaniu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -217,7 +875,7 @@
                 <a href="#" class="text-decoration-none text-uppercase fs-5 fw-semibold">Medi Blog</a>
             </div>
             <div class="row mt-3">
-                <div class="col-3 d-flex">
+                <div class="col-sm-6 col-lg-3 d-flex">
                     <div class="card border-0 rounded-0 py-3">
                         <a href="#" class="mb-2 d-flex">
                             <img class="w-100" src="image/blog/94-home-default.webp" alt="">
@@ -231,7 +889,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 d-flex">
+                <div class="col-sm-6 col-lg-3 d-flex">
                     <div class="card border-0 rounded-0 py-3">
                         <a href="#" class="mb-2 d-flex">
                             <img class="w-100" src="image/blog/93-home-default.webp" alt="">
@@ -245,7 +903,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 d-flex">
+                <div class="col-sm-6 col-lg-3 d-flex">
                     <div class="card border-0 rounded-0 py-3">
                         <a href="#" class="mb-2 d-flex">
                             <img class="w-100" src="image/blog/87-home-default.webp" alt="">
@@ -259,7 +917,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 d-flex">
+                <div class="col-sm-6 col-lg-3 d-flex">
                     <div class="card border-0 rounded-0 py-3">
                         <a href="#" class="mb-2 d-flex">
                             <img class="w-100" src="image/blog/86-home-default.webp" alt="">
@@ -279,41 +937,41 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-10">
-                    <ul id="brandslider">
-                        <li>
+                <div class="col-12 col-lg-10">
+                    <ul id="brandslider" class="owl-carousel owl-theme list-unstyled">
+                        <li class="item">
                             <a href="#" class="d-block">
                                 <img class="w-100" src="image/brand/1.jpg" alt="">
                             </a>
                         </li>
-                        <li>
+                        <li class="item">
                             <a href="#" class="d-block">
                                 <img class="w-100" src="image/brand/2.jpg" alt="">
                             </a>
                         </li>
-                        <li>
+                        <li class="item">
                             <a href="#" class="d-block">
                                 <img class="w-100" src="image/brand/3.jpg" alt="">
                             </a>
                         </li>
-                        <li>
+                        <li class="item">
                             <a href="#" class="d-block">
                                 <img class="w-100" src="image/brand/4.jpg" alt="">
                             </a>
                         </li>
-                        <li>
+                        <li class="item">
                             <a href="#" class="d-block">
                                 <img class="w-100" src="image/brand/6.jpg" alt="">
                             </a>
                         </li>
-                        <li>
+                        <li class="item">
                             <a href="#" class="d-block">
                                 <img class="w-100" src="image/brand/7.jpg" alt="">
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-2 d-flex align-items-center justify-content-end">
+                <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center justify-content-lg-end">
                     <a href="#" class="btn p-3 py-2 rounded-1 btn-outline-primary">Všetky značky</a>
                 </div>
             </div>
@@ -322,15 +980,15 @@
     <section class="cta-footer-top py-3 mt-4">
         <div class="container">
             <div class="row">
-                <div class="col-6 d-flex align-items-center gap-3">
+                <div class="col-md-8 col-lg-6 d-flex align-items-center gap-3 mb-3 b-md-0">
                     <img width="100" src="image/mail_medi.webp" alt="">
                     <div>
                         <h4 class="fw-semibold text-white h4">Odoberaj novinky a získaj prehľad o super akciách!</h4>
                         <span class="text-white fw-normal mb-1">Získajte pravidelné informácie o super ponukách, akciách a zľavách. <br> Zo zasielania sa môžte kedykoľvek odhlásiť.</span>
                     </div>
                 </div>
-                <div class="col-6 d-flex align-items-center">
-                    <div class="search-box-wrapper w-50">
+                <div class="col-md-4 col-lg-6 d-flex justify-content-center justify-content-md-start align-items-center">
+                    <div class="search-box-wrapper col-lg-6">
                         <form class="search-box bg-transparent d-flex align-items-center">
                             <input type="text" class="form-control sub border-0 rounded-0 bg-transparent text-white" placeholder="Zadajte e-mail">
                             <button type="button" class="btn src-btn border-0 border-start rounded-0 d-flex align-items-center justify-content-center">
@@ -345,18 +1003,18 @@
     <footer class="pt-5">
         <div class="container">
             <div class="row mb-3">
-                <div class="col-4">
+                <div class="col-sm-4 text-center text-md-start">
                     <h4 class="footer-title">Všetko o nákupe</h4>
                     <div class="row">
-                        <div class="col-6">
-                            <ul class="list-unstyled">
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
                                 <li><a href="#" class="text-decoration-none">Obchodné podmienky</a></li>
                                 <li><a href="#" class="text-decoration-none">Doprava</a></li>
                                 <li><a href="#" class="text-decoration-none">Možnosti platby</a></li>
                             </ul>
                         </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled">
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
                                 <li><a href="#" class="text-decoration-none">Reklamácie</a></li>
                                 <li><a href="#" class="text-decoration-none">Formuláre</a></li>
                                 <li><a href="#" class="text-decoration-none">Ochrana osobných údajov</a></li>
@@ -364,18 +1022,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4 text-center text-md-start">
                     <h4 class="footer-title">O nás</h4>
                     <div class="row">
-                        <div class="col-6">
-                            <ul class="list-unstyled">
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
                                 <li><a href="#" class="text-decoration-none">O medikament</a></li>
                                 <li><a href="#" class="text-decoration-none">Prečo nakupovať u nás</a></li>
                                 <li><a href="#" class="text-decoration-none">O Nás</a></li>
                             </ul>
                         </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled">
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
                                 <li><a href="#" class="text-decoration-none">Kontakt</a></li>
                                 <li><a href="#" class="text-decoration-none">Naše lekárne</a></li>
                                 <li><a href="#" class="text-decoration-none">Mediblog</a></li>
@@ -383,25 +1041,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4 text-center text-md-start">
                     <h4 class="footer-title">Zákaznícky servis</h4>
                     <div class="row">
-                        <div class="col-6">
-                            <ul class="list-unstyled">
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
                                 <li><a href="#" class="text-decoration-none">Poradenstvo</a></li>
                                 <li><a href="#" class="text-decoration-none">Hlásenie o nežiaducich účinkoch</a></li>
                             </ul>
                         </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled">
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
                                 <li class="d-flex align-items-center gap-2">
                                     <a href="#"><iconify-icon class="fs-1" icon="ri:facebook-fill"></iconify-icon></a>
                                     <a href="#"><iconify-icon class="fs-1" icon="lets-icons:insta-light"></iconify-icon></a>
                                     <a href="#"><img width="60" src="image/sukl.svg" alt=""></a>
                                 </li>
                                 <li class="d-flex align-items-center gap-2">
-                                    <a href="#"><img width="120" src="image/LeMedic_logo__respozivne-pozitiv-claim-rok.webp" alt=""></a>
-                                    <a href="#"><img width="80" src="image/sukl.webp" alt=""></a>
+                                    <a href="#"><img class="s-image" width="120" src="image/LeMedic_logo__respozivne-pozitiv-claim-rok.webp" alt=""></a>
+                                    <a href="#"><img class="s-image" width="80" src="image/sukl.webp" alt=""></a>
                                 </li>
                             </ul>
                         </div>
@@ -419,36 +1077,71 @@
     
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-        $('#brandslider').lightSlider({
-            item:6,
-            loop:false,
-            slideMove:2,
-            easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-            speed:600,
-            responsive : [
-                {
-                    breakpoint:800,
-                    settings: {
-                        item:3,
-                        slideMove:1,
-                        slideMargin:6,
-                        loop:true,
+            function initializeOwlCarousel(selector, items, navs) {
+                $(selector).owlCarousel({
+                    items: items,
+                    loop: false,
+                    margin: 10,
+                    nav: navs,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            loop: true
+                        },
+                        480: {
+                            items: 2,
+                            loop: true
+                        },
+                        800: {
+                            items: 3,
+                            loop: true
+                        },
+                        1000: {
+                            items: items
+                        }
+                    },
+                    smartSpeed: 600, 
+                    slideBy: 2,
+                    autoplayHoverPause: true,
+                    autoplayTimeout: 5000,
+                });
+            }
+            initializeOwlCarousel('#productSlider1', 4, true);
+            initializeOwlCarousel('#productSlider2', 4, true);
+            initializeOwlCarousel('#productSlider3', 4, true);
+            initializeOwlCarousel('#productSlider4', 4, true);
+            $('#brandslider').owlCarousel({
+                items: 6,
+                loop: false,
+                margin: 10,
+                responsive: {
+                    0: {
+                        items: 2,
+                        loop: true
+                    },
+                    480: {
+                        items: 3,
+                        loop: true
+                    },
+                    800: {
+                        items: 4,
+                        loop: true
+                    },
+                    1000: {
+                        items: 6
                     }
                 },
-                {
-                    breakpoint:480,
-                    settings: {
-                        item:2,
-                        slideMove:1
-                    }
-                }
-            ]
-        });  
-    });
+                smartSpeed: 600, 
+                slideBy: 2,
+                autoplayHoverPause: true,
+                autoplayTimeout: 5000,
+            });
+        });
     </script>
+    
 </body>
 
 </html>
