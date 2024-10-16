@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online lekáreň pre vaše zdravie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar py-3">
+        <div class="header-top container">
+            <div class="d-flex align-items-center gap-2">
+                <span class="mb-0 d-flex align-items-center gap-2">Doprava zdarma od <span class="color-primary">79€</span> <iconify-icon class="color-primary" icon="fa6-solid:truck"></iconify-icon></span>
+                <span class="mb-0"><a href="#" class="d-flex align-items-center gap-2 text-decoration-none">Mediblog <iconify-icon icon="fa:book"></iconify-icon></a></span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="mb-0 d-flex align-items-center gap-2"><iconify-icon icon="carbon:phone-filled"></iconify-icon> avolajte nám: <a href="#" class="text-decoration-none">054/8775000</a><span>
+                <span class="mb-0 d-flex align-items-center gap-2">alebo <a href="#" class="d-flex align-items-center gap-2 text-decoration-none">info@medikament.sk</a></span>
+            </div>
+        </div>
+        <div class="container d-block pt-3">
+            <div class="row">
+                <div class="col-3">
+                    <a class="navbar-brand" href="#"><img src="image/medikamentsk-logo.jpg" alt="medikamentsk-logo"></a>
+                </div>
+                <div class="col-6">
+                    <div class="search-box-wrapper w-100">
+                        <form class="search-box d-flex align-items-center">
+                            <input type="text" class="form-control border-0 rounded-0" placeholder="Vyhľadávanie">
+                            <button type="button" class="btn src-btn border-0 border-start rounded-0 d-flex align-items-center justify-content-center">
+                                <iconify-icon class="color-primary" icon="fa:search"></iconify-icon>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="d-flex align-items-center justify-content-center gap-3">
+                        <a href="#" class="user-btn-wrapper w-50 d-flex align-items-center justify-content-center text-decoration-none">
+                            <iconify-icon class="user-icon" icon="fa:user"></iconify-icon>
+                        </a>
+                        <a href="#" class="cart-btn-wrapper py-2 px-3 w-50 d-flex align-items-center justify-content-center gap-2 text-decoration-none">
+                            <iconify-icon class="cart-icon" icon="solar:cart-3-bold"></iconify-icon>
+                            (prázdny)
+                        </a>
+                    </div>
+                </div>
+
+                <div class="menu-wrapper mt-3">
+                    <ul class="list-unstyled d-flex align-items-center justify-content-center mb-0">
+                        <li>
+                            <a href="#" class="text-decoration-none navItems colored px-4 py-2 d-block fw-semibold">AKCIE</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Imunita</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Domácnosť</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Zdravie a lieky</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Doplnky stravy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Kozmetika</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Matka a dieťa</a>
+                            </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Šport</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Zdravotné pomôcky</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Veterina</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">latest</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div> -->
+        </div>
+    </nav>
+    <section class="hero-slider py-3">
+        <div class="container">
+            <div id="hero-slider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <a href="#" class="carousel-item active">
+                        <img src="image/slider-1.webp" class="d-block w-100" alt="slider-1">
+                    </a>
+                    <a href="#" class="carousel-item">
+                        <img src="image/slider-2.png" class="d-block w-100" alt="slider-2">
+                    </a>
+                    <a href="#" class="carousel-item">
+                        <img src="image/slider-3.png" class="d-block w-100" alt="slider-3">
+                    </a>
+                    <a href="#" class="carousel-item">
+                        <img src="image/slider-4.png" class="d-block w-100" alt="slider-4">
+                    </a>
+                    <a href="#" class="carousel-item">
+                        <img src="image/slider-5.jpg" class="d-block w-100" alt="slider-5">
+                    </a>
+                    <a href="#" class="carousel-item">
+                        <img src="image/slider-6.png" class="d-block w-100" alt="slider-6">
+                    </a>
+                    <a href="#" class="carousel-item">
+                        <img src="image/slider-7.webp" class="d-block w-100" alt="slider-7">
+                    </a>
+                    <a href="#" class="carousel-item">
+                        <img src="image/slider-8.jpg" class="d-block w-100" alt="slider-8">
+                    </a>
+                    <a href="#" class="carousel-item">
+                        <img src="image/slider-9.png" class="d-block w-100" alt="slider-9">
+                    </a>
+                    <a href="#" class="carousel-item">
+                        <img src="image/slider-10.png" class="d-block w-100" alt="slider-10">
+                    </a>
+                </div>
+                <button class="carousel-control-prev carousel-icon color-primary" type="button" data-bs-target="#hero-slider" data-bs-slide="prev">
+                    <iconify-icon icon="dashicons:arrow-left-alt2"></iconify-icon>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next carousel-icon color-primary" type="button" data-bs-target="#hero-slider" data-bs-slide="next">
+                    <iconify-icon icon="dashicons:arrow-right-alt2"></iconify-icon>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <ul class="nav nav-tabs border-0 d-flex align-items-center gap-2 mb-5" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link border-0 rounded-0  active" id="latest-tab" data-bs-toggle="tab" data-bs-target="#latest-tab-pane" type="button" role="tab" aria-controls="latest-tab-pane" aria-selected="true">Najnovšie</button>
+                </li>
+                <li style="border-left: 1px solid #e8e8e8;">&nbsp;</li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link border-0 rounded-0" id="recommend-tab" data-bs-toggle="tab" data-bs-target="#recommend-tab-pane" type="button" role="tab" aria-controls="recommend-tab-pane" aria-selected="false">Odporúčame</button>
+                </li>
+                <li style="border-left: 1px solid #e8e8e8;">&nbsp;</li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link border-0 rounded-0" id="discount-tab" data-bs-toggle="tab" data-bs-target="#discount-tab-pane" type="button" role="tab" aria-controls="discount-tab-pane" aria-selected="false">Zľavnené produkty</button>
+                </li>
+                <li style="border-left: 1px solid #e8e8e8;">&nbsp;</li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link border-0 rounded-0" id="bestsale-tab" data-bs-toggle="tab" data-bs-target="#bestsale-tab-pane" type="button" role="tab" aria-controls="bestsale-tab-pane" aria-selected="false">Najpredávanejšie</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="latest-tab-pane" role="tabpanel" aria-labelledby="latest-tab" tabindex="0">
+                    tab 1
+                </div>
+                <div class="tab-pane fade" id="recommend-tab-pane" role="tabpanel" aria-labelledby="recommend-tab" tabindex="0">
+                    tab 2
+                </div>
+                <div class="tab-pane fade" id="discount-tab-pane" role="tabpanel" aria-labelledby="discount-tab" tabindex="0">
+                    tab 3
+                </div>
+                <div class="tab-pane fade" id="bestsale-tab-pane" role="tabpanel" aria-labelledby="bestsale-tab" tabindex="0">
+                    tab 4
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3 blog">
+        <div class="container">
+            <div class="blog-heading px-3 py-2 border-top border-5">
+                <a href="#" class="text-decoration-none text-uppercase fs-5 fw-semibold">Medi Blog</a>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3 d-flex">
+                    <div class="card border-0 rounded-0 py-3">
+                        <a href="#" class="mb-2 d-flex">
+                            <img class="w-100" src="image/blog/94-home-default.webp" alt="">
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <h5 class="card-heading text-uppercase fw-semibold h6">Všetko o zinku: Užívanie, nedostatok, účinky a kde sa nachádza? </h5>
+                        </a>
+                        <span class="fw-normal color-primary mb-3">Zinok je minerál, ktorý je nevyhnutný pre mnohé z normálnych funkcií a systémov tela. Spoznajte zinok a jeho účinky.</span>
+                        <div class="text-center mt-auto">
+                            <a href="#" class="btn btn-sm btn-web-primary">Čítaj ďalej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-flex">
+                    <div class="card border-0 rounded-0 py-3">
+                        <a href="#" class="mb-2 d-flex">
+                            <img class="w-100" src="image/blog/93-home-default.webp" alt="">
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <h5 class="card-heading text-uppercase fw-semibold h6">Vitamíny na posilnenie imunity: Podpora prírodnou formou</h5>
+                        </a>
+                        <span class="fw-normal color-primary mb-3">Aj keď existujú rôzne doplnky na podporu imunity, na jej posilnenie vám pomôže aj prírodná cesta. Zistite viac! </span>
+                        <div class="text-center mt-auto">
+                            <a href="#" class="btn btn-sm btn-web-primary">Čítaj ďalej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-flex">
+                    <div class="card border-0 rounded-0 py-3">
+                        <a href="#" class="mb-2 d-flex">
+                            <img class="w-100" src="image/blog/87-home-default.webp" alt="">
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <h5 class="card-heading text-uppercase fw-semibold h6">Kŕče, nadúvanie a plynatosť: Možné príčiny a riešenia</h5>
+                        </a>
+                        <span class="fw-normal color-primary mb-3">Keďže ide o stav, ktorý nám nie je príjemný, čítajte ďalej. Povieme vám, ako sa zbaviť kŕčov, plynatosti a nadúvania.</span>
+                        <div class="text-center mt-auto">
+                            <a href="#" class="btn btn-sm btn-web-primary">Čítaj ďalej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-flex">
+                    <div class="card border-0 rounded-0 py-3">
+                        <a href="#" class="mb-2 d-flex">
+                            <img class="w-100" src="image/blog/86-home-default.webp" alt="">
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <h5 class="card-heading text-uppercase fw-semibold h6">Ako spoznať depresiu a úzkosť? Pomôžu prírodné lieky?</h5>
+                        </a>
+                        <span class="fw-normal color-primary mb-3">Ide o fyziologické stavy psychiky alebo chorobné stavy? Ako spoznať, kedy ide o úzkosť a kedy o depresiu?</span>
+                        <div class="text-center mt-auto">
+                            <a href="#" class="btn btn-sm btn-web-primary">Čítaj ďalej</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <ul id="brandslider">
+                        <li>
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/6.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/7.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-2 d-flex align-items-center justify-content-end">
+                    <a href="#" class="btn p-3 py-2 rounded-1 btn-outline-primary">Všetky značky</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-footer-top py-3 mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 d-flex align-items-center gap-3">
+                    <img width="100" src="image/mail_medi.webp" alt="">
+                    <div>
+                        <h4 class="fw-semibold text-white h4">Odoberaj novinky a získaj prehľad o super akciách!</h4>
+                        <span class="text-white fw-normal mb-1">Získajte pravidelné informácie o super ponukách, akciách a zľavách. <br> Zo zasielania sa môžte kedykoľvek odhlásiť.</span>
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                    <div class="search-box-wrapper w-50">
+                        <form class="search-box bg-transparent d-flex align-items-center">
+                            <input type="text" class="form-control sub border-0 rounded-0 bg-transparent text-white" placeholder="Zadajte e-mail">
+                            <button type="button" class="btn src-btn border-0 border-start rounded-0 d-flex align-items-center justify-content-center">
+                                <iconify-icon class="text-white fs-5" icon="uiw:right-circle"></iconify-icon>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-4">
+                    <h4 class="footer-title">Všetko o nákupe</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none">Obchodné podmienky</a></li>
+                                <li><a href="#" class="text-decoration-none">Doprava</a></li>
+                                <li><a href="#" class="text-decoration-none">Možnosti platby</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none">Reklamácie</a></li>
+                                <li><a href="#" class="text-decoration-none">Formuláre</a></li>
+                                <li><a href="#" class="text-decoration-none">Ochrana osobných údajov</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h4 class="footer-title">O nás</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none">O medikament</a></li>
+                                <li><a href="#" class="text-decoration-none">Prečo nakupovať u nás</a></li>
+                                <li><a href="#" class="text-decoration-none">O Nás</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none">Kontakt</a></li>
+                                <li><a href="#" class="text-decoration-none">Naše lekárne</a></li>
+                                <li><a href="#" class="text-decoration-none">Mediblog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h4 class="footer-title">Zákaznícky servis</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none">Poradenstvo</a></li>
+                                <li><a href="#" class="text-decoration-none">Hlásenie o nežiaducich účinkoch</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="d-flex align-items-center gap-2">
+                                    <a href="#"><iconify-icon class="fs-1" icon="ri:facebook-fill"></iconify-icon></a>
+                                    <a href="#"><iconify-icon class="fs-1" icon="lets-icons:insta-light"></iconify-icon></a>
+                                    <a href="#"><img width="60" src="image/sukl.svg" alt=""></a>
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <a href="#"><img width="120" src="image/LeMedic_logo__respozivne-pozitiv-claim-rok.webp" alt=""></a>
+                                    <a href="#"><img width="80" src="image/sukl.webp" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center"> <a href="#" class="text-decoration-none">Nastavenia súborov cookie</a></p>
+            <p class="text-center mb-5"><span class="fw-normal">Možnosti platby:</span> <br> <span><img src="image/gpwebpay_maly.webp" alt=""></span></p>
+            <p class="text-center"><span class="fw-normal">Copyright 2007-2020 © Medikament</span></p>
+            
+        </div>
+    </footer>
+
+
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $('#brandslider').lightSlider({
+            item:6,
+            loop:false,
+            slideMove:2,
+            easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+            speed:600,
+            responsive : [
+                {
+                    breakpoint:800,
+                    settings: {
+                        item:3,
+                        slideMove:1,
+                        slideMargin:6,
+                        loop:true,
+                    }
+                },
+                {
+                    breakpoint:480,
+                    settings: {
+                        item:2,
+                        slideMove:1
+                    }
+                }
+            ]
+        });  
+    });
+    </script>
+</body>
+
+</html>
