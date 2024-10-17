@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online lekáreň pre vaše zdravie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar w-100 py-2 py-md-3">
+        <div class="header-top container d-none d-lg-flex">
+            <div class="d-flex align-items-center gap-2">
+                <span class="mb-0 d-flex align-items-center gap-2">Doprava zdarma od <span class="color-primary">79€</span><i class="bi bi-truck color-primary"></i></span>
+                <span class="mb-0"><a href="#" class="d-flex align-items-center gap-2 text-decoration-none">Mediblog <i class="bi bi-book color-primary"></i></a></span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="mb-0 d-flex align-items-center gap-2"><i class="bi bi-telephone"></i> avolajte nám: <a href="#" class="text-decoration-none">054/8775000</a><span>
+                <span class="mb-0 d-flex align-items-center gap-2">alebo <a href="#" class="d-flex align-items-center gap-2 text-decoration-none">info@medikament.sk</a></span>
+            </div>
+        </div>
+        <div class="container d-block pt-lg-3">
+            <div class="row">
+                <div class="col-6 col-md-3 d-flex align-items-center">
+                    <a class="navbar-brand py-0" href="#"><img class="w-100" src="image/medikamentsk-logo.jpg" alt="medikamentsk-logo"></a>
+                </div>
+                <div class="col-md-5 col-xl-6 d-none d-md-block ">
+                    <div class="search-box-wrapper w-100">
+                        <form class="search-box d-flex align-items-center">
+                            <input type="text" class="form-control border-0 rounded-0" placeholder="Vyhľadávanie">
+                            <button type="button" class="btn src-btn border-0 border-start rounded-0 d-flex align-items-center justify-content-center">
+                                <i class="bi bi-search color-primary"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="d-flex align-items-center justify-content-end justify-content-lg-center gap-md-3">
+                        <div class="d-md-none">
+                            <button type="button" class="btn src-btn border-0 px-1 me-1 rounded-0 d-flex align-items-center justify-content-center">
+                                <i class="bi bi-search fss-same color-primary"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="user-btn-wrapper col-lg-6 px-1  me-1 d-flex align-items-center justify-content-center text-decoration-none">
+                            <i class="bi bi-person-fill fss-same user-icon"></i>
+                        </a>
+                        <a href="#" class="cart-btn-wrapper py-md-2 px-1 px-md-3  me-1 col-lg-6 d-flex align-items-center justify-content-center gap-2 text-decoration-none">
+                            <i class="bi bi-basket fss-same cart-icon"></i>
+                            <span class="d-none d-md-block">(prázdny)</span>
+                        </a>
+                        <button class="navbar-toggler d-flex d-lg-none border-0 px-1 pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            <span class="fss-same navbar-toggler-icon fs-3"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="menu-wrapper mt-3 d-none d-lg-block">
+                    <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-center mb-0">
+                        <li>
+                            <a href="#" class="text-decoration-none navItems colored px-4 py-2 d-block fw-semibold">AKCIE</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Imunita</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Domácnosť</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Zdravie a lieky</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Doplnky stravy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Kozmetika</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Matka a dieťa</a>
+                            </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Šport</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Zdravotné pomôcky</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Veterina</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offcanvas offcanvas-start d-flex d-lg-none pt-3" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="menu-wrapper mt-3">
+                        <ul class="list-unstyled d-flex flex-column justify-content-center mb-0">
+                            <li>
+                                <a href="#" class="text-decoration-none navItems colored px-4 py-2 d-block fw-semibold">AKCIE</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Imunita</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Domácnosť</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Zdravie a lieky</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Doplnky stravy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Kozmetika</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Matka a dieťa</a>
+                                </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Šport</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Zdravotné pomôcky</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none navItems px-4 py-2 d-block fw-semibold border-start border-white">Veterina</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="top-gap-fixed"></div>
+    <section class="py-3">
+        <div class="container" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none"><i class="bi bi-house-door-fill"></i></a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Doplnky stravy</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Vitamíny a minerály</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Vitamíny</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Vitamín C</a></li>
+                <li class="breadcrumb-item" aria-current="page">Slovakiapharm VITAMIN C 1000mg so Sipkami tablety 60 ks</li>
+            </ol>
+        </div>
+    </section>
+    <section class="single-product py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 position-relative">
+                    <div class="product-gallery border owl-carousel owl-theme">
+                        <a href="image/product/slovakiapharm-vitamin-c-1000mg-so-sipkami-60-tbl.jpg" class="item d-block" data-fancybox="gallery" data-caption="Slovakiapharm VITAMIN C 1000mg so Sipkami tablety 60 ks">
+                            <img src="image/product/slovakiapharm-vitamin-c-1000mg-so-sipkami-60-tbl.jpg" class="d-block w-100 product-img" alt="Product Image">
+                        </a>
+                    </div>
+                    <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+                </div>
+                <div class="col-md-6 position-relative d-flex align-items-center">
+                    <div class="product-details w-100 ps-5">
+                        <h5 class="single-product-title fw-bold mb-3">Slovakiapharm VITAMIN C 1000mg so Sipkami tablety 60 ks</h5>
+                        <p class="product-ref mb-2">
+                            <label class="fs-13 fw-semibold">Kód </label>
+                            <span class="color-primary fw-normal">ag189601</span>
+                        </p>
+                        <hr class="mt-0">
+
+                        <p class="product-full-desc fs-13"></p>
+
+                        <div class="mb-3">
+                            <h5 class="variants-title fs-18 color-primary mb-2">Velkost balenia </h5>
+                            <div class="btn--wrapper">
+                                <a href="#" class="variants_btn d-inline-block">60ks</a>
+                            </div>
+                        </div>
+
+                        <div class="product-price-wrapper mb-2">
+                            <div class="row py-3">
+                                <div class="col-md-7">
+                                    <h3 class="product-price color-primary mb-0 text-center mb-0 fw-semibold">7,24 € </h3>
+                                </div>
+                                <div class="col-md-5 d-flex align-items-center justify-content-center">
+                                    <span class="product-availability-status"><i class="bi bi-check-circle-fill"></i> Skladom - ihned k odoslaniu</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="d-flex list-unstyled gap-3 mb-4">
+                            <li><a href="#" class="text-decoration-none"><i class="bi bi-graph-down text-dark"></i> <span>História ceny</span></a></li>
+                            <li><span class="fw-normal color-primary">NajniZSia cena za posledných 30 dní bola 7,24 €</span></li>
+                        </ul>
+
+                        <div class="add-cart-btn-wrapper">
+                            <ul class="d-flex list-unstyled justify-content-center align-items-center gap-3 mb-0">
+                                <li class="quantity-wrapper d-flex align-items-center border border-2 p-2">
+                                    <a href="#" class="btn border-0 fs-5 p-0 color-primary product_quantity_down">
+                                        <i class="bi bi-dash-circle-fill"></i>
+                                    </a>
+                                    <input type="number" min="1" id="quantityField" class="form-control border-0 text-center" value="1">
+                                    <a href="#" class="btn border-0 fs-5 p-0 color-primary product_quantity_up">
+                                        <i class="bi bi-plus-circle-fill"></i>
+                                    </a>
+                                </li>
+                                <li class="quantity-btn-wrapper">
+                                    <a href="#" class="cart-btn-wrapper cart-btn-lg d-flex align-items-center justify-content-center gap-2 text-decoration-none">
+                                        <i class="bi bi-basket"></i>
+                                        Vložiť do košíka
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-5">
+                    <div class="accordion" id="productTab">
+                        <p class="d-inline-flex gap-1">
+                          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFeature" aria-expanded="true" aria-controls="collapseFeature">
+                            Vlastnosti
+                          </button>
+                          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReviews" aria-expanded="false" aria-controls="collapseReviews">
+                            Recenzie
+                          </button>
+                        </p>
+                      
+                        <div id="collapseFeature" class="accordion-collapse collapse show" data-bs-parent="#productTab">
+                            <table class="table table-bordered data-sheet-wrapper mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">Brand</td>
+                                        <td class="text-primary">NEW C</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Features</td>
+                                        <td class="text-primary">Liposomal</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Form</td>
+                                        <td class="text-primary">Capsules</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Determination</td>
+                                        <td class="text-primary">For adults</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Category</td>
+                                        <td class="text-primary">Food supplements</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Supplement to</td>
+                                        <td class="text-primary">Immunity</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">It bothers me</td>
+                                        <td class="text-primary">Weakened immunity</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                      
+                        <div id="collapseReviews" class="accordion-collapse collapse" data-bs-parent="#productTab">
+                          <div class="card card-body rounded-0">
+                            <div>
+                                <a href="#" class="btn btn-primary-filed">Be the first to write a review!</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3">
+        <div class="container">
+            <div class="similar-product-wrapper">
+                <h4 class="fw-semibold text-center">Podobné produkty</h4>
+
+                <ul class="grid-4-slider owl-carousel owl-theme list-unstyled">
+                    <li class="item">
+                        <div class="product-card-2 p-3 pb-4 d-flex flex-column">
+                            <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/ducray-neoptide-expert-serum-proti-vypadavaniu-a-na-rast-vlasov-2x50-ml.jpg" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">DUCRAY NEOPTIDE EXPERT  SÉRUM proti….</h5></a>
+                            <p class="product-desc text-center">NEOPTIDE EXPERT Sérums dvojitým úcinkom
+                                pomáha v boji proti chronickému vypadávaniu vlasov</p>
+                            <div class="row">
+                                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                    <h4 class="product-price color-primary mb-0">54,34 €</h4>
+                                </div>
+                                <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                    <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center justify-content-center w-100 gap-2">
+                                        <i class="bi bi-basket cart-icon"></i>
+                                        Do košíka
+                                    </button>
+                                    <span class="availability_status"><i class="bi bi-check-circle-fill"></i> Ihneď k odoslaniu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="product-card-2 p-3 pb-4 d-flex flex-column">
+                            <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/ducray-creastim-reactiv-roztok-proti-vypadavaniu-vlasov-60-ml.jpg" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3"> DUCRAY CREASTIM REACTIV
+                                roztok proti...</h5></a>
+                            <p class="product-desc text-center">Ducray Creastim roztok proti vypadávaniu vlasov (pri
+                                strese, diéte, po pôrode). Urychluje rast vlasov.</p>
+                            <div class="row">
+                                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                    <h4 class="product-price color-primary mb-0">49,30 €</h4>
+                                </div>
+                                <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                    <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center justify-content-center w-100 gap-2">
+                                        <i class="bi bi-basket cart-icon"></i>
+                                        Do košíka
+                                    </button>
+                                    <span class="availability_status"><i class="bi bi-check-circle-fill"></i> Ihneď k odoslaniu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="product-card-2 p-3 pb-4 d-flex flex-column">
+                            <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/ducray-anacaps-expert-kapsuly-90-ks.jpg" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3"> DUCRAY ANACAPS EXPERT
+                                kapsuly 90 ks</h5></a>
+                            <p class="product-desc text-center">Vyzivový dopinok obsahujúci aminokyseliny, vytaky
+                                z rastlín, vitamíny a minerály. Obsahuje: výtazok z</p>
+                            <div class="row">
+                                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                    <h4 class="product-price color-primary mb-0">46,25 €</h4>
+                                </div>
+                                <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                    <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center justify-content-center w-100 gap-2">
+                                        <i class="bi bi-basket cart-icon"></i>
+                                        Do košíka
+                                    </button>
+                                    <span class="availability_status"><i class="bi bi-check-circle-fill"></i> Ihneď k odoslaniu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="product-card-2 p-3 pb-4 d-flex flex-column">
+                            <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/la-roche-cicaplast-b5-serum-30-ml.jpg" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">La roche cicaplast B5 sérum 30 ml</h5></a>
+                            <p class="product-desc text-center"></p>
+                            <div class="row">
+                                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                    <h4 class="product-price color-primary mb-0">32,34 €</h4>
+                                </div>
+                                <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
+                                    <button class="border-0 add-cart-btn h-auto py-1 px-2 cart-btn-wrapper text-uppercase d-flex align-items-center justify-content-center w-100 gap-2">
+                                        <i class="bi bi-basket cart-icon"></i>
+                                        Do košíka
+                                    </button>
+                                    <span class="availability_status"><i class="bi bi-check-circle-fill"></i> Ihned k odoslaniu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-10">
+                    <ul id="brandslider" class="owl-carousel owl-theme list-unstyled">
+                        <li class="item">
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/6.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="d-block">
+                                <img class="w-100" src="image/brand/7.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center justify-content-lg-end">
+                    <a href="#" class="btn p-3 py-2 rounded-1 btn-outline-primary">Všetky značky</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-footer-top py-3 mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 d-flex align-items-center gap-3 mb-3 b-md-0">
+                    <img width="100" src="image/mail_medi.webp" alt="">
+                    <div>
+                        <h4 class="fw-semibold text-white h4">Odoberaj novinky a získaj prehľad o super akciách!</h4>
+                        <span class="text-white fw-normal mb-1">Získajte pravidelné informácie o super ponukách, akciách a zľavách. <br> Zo zasielania sa môžte kedykoľvek odhlásiť.</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-6 d-flex justify-content-center justify-content-md-start align-items-center">
+                    <div class="search-box-wrapper col-lg-6">
+                        <form class="search-box bg-transparent d-flex align-items-center">
+                            <input type="text" class="form-control sub border-0 rounded-0 bg-transparent text-white" placeholder="Zadajte e-mail">
+                            <button type="button" class="btn src-btn border-0 border-start rounded-0 d-flex align-items-center justify-content-center">
+                                <i class="bi bi-arrow-right-circle text-white fs-5"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-sm-4 text-center text-md-start">
+                    <h4 class="footer-title">Všetko o nákupe</h4>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#" class="text-decoration-none">Obchodné podmienky</a></li>
+                                <li><a href="#" class="text-decoration-none">Doprava</a></li>
+                                <li><a href="#" class="text-decoration-none">Možnosti platby</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#" class="text-decoration-none">Reklamácie</a></li>
+                                <li><a href="#" class="text-decoration-none">Formuláre</a></li>
+                                <li><a href="#" class="text-decoration-none">Ochrana osobných údajov</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center text-md-start">
+                    <h4 class="footer-title">O nás</h4>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#" class="text-decoration-none">O medikament</a></li>
+                                <li><a href="#" class="text-decoration-none">Prečo nakupovať u nás</a></li>
+                                <li><a href="#" class="text-decoration-none">O Nás</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#" class="text-decoration-none">Kontakt</a></li>
+                                <li><a href="#" class="text-decoration-none">Naše lekárne</a></li>
+                                <li><a href="#" class="text-decoration-none">Mediblog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center text-md-start">
+                    <h4 class="footer-title">Zákaznícky servis</h4>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#" class="text-decoration-none">Poradenstvo</a></li>
+                                <li><a href="#" class="text-decoration-none">Hlásenie o nežiaducich účinkoch</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-6">
+                            <ul class="list-unstyled mb-0 d-flex d-md-block justify-content-center">
+                                <li class="d-flex align-items-center gap-2">
+                                    <a href="#"><i class="bi bi-facebook fs-1"></i></a>
+                                    <a href="#"><i class="bi bi-instagram fs-1"></i></a>
+                                    <a href="#"><img width="60" src="image/sukl.svg" alt=""></a>
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <a href="#"><img class="s-image" width="120" src="image/LeMedic_logo__respozivne-pozitiv-claim-rok.webp" alt=""></a>
+                                    <a href="#"><img class="s-image" width="80" src="image/sukl.webp" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center"> <a href="#" class="text-decoration-none">Nastavenia súborov cookie</a></p>
+            <p class="text-center mb-3 mb-md-5"><span class="fw-normal">Možnosti platby:</span> <br> <span><img src="image/gpwebpay_maly.webp" alt=""></span></p>
+            <p class="text-center"><span class="fw-normal">Copyright 2007-2020 © Medikament</span></p>
+            
+        </div>
+    </footer>
+
+
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#brandslider').owlCarousel({
+                items: 6,
+                loop: false,
+                margin: 10,
+                responsive: {
+                    0: {
+                        items: 2,
+                        loop: true
+                    },
+                    480: {
+                        items: 3,
+                        loop: true
+                    },
+                    800: {
+                        items: 4,
+                        loop: true
+                    },
+                    1000: {
+                        items: 6
+                    }
+                },
+                smartSpeed: 600, 
+                slideBy: 2,
+                autoplayHoverPause: true,
+                autoplayTimeout: 5000,
+            });
+
+            $('.product-gallery').owlCarousel({
+                items: 1,
+                loop: false,
+            });
+            $('.grid-4-slider').owlCarousel({
+                items: 4,
+                loop: false,
+                margin: 10,
+            });
+        });
+    </script>
+    <script src="js/custom.js"></script>
+    
+</body>
+
+</html>
