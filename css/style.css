@@ -18,7 +18,7 @@ span {
     font-weight: 600;
 }
 
-span iconify-icon {
+span i {
     font-size: 16px;
 }
 
@@ -125,6 +125,10 @@ form.search-box .src-btn:active {
 .cart-icon {
     font-size: 22px;
 }
+.product-card .cart-icon {
+    font-size: 16px;
+    margin-right: 5px;
+}
 
 .navItems {
     -webkit-transition: 0.3s ease;
@@ -142,8 +146,8 @@ form.search-box .src-btn:active {
     background-color: #cce5ed;
 }
 
-.hero-slider .carousel-icon iconify-icon {
-    font-size: 30px;
+.hero-slider .carousel-icon i {
+    font-size: 20px;
 }
 
 .hero-slider .carousel-control-next,
