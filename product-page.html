@@ -152,16 +152,18 @@
     <section class="single-product py-2">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 position-relative">
-                    <div class="product-gallery border owl-carousel owl-theme">
-                        <a href="image/product/slovakiapharm-vitamin-c-1000mg-so-sipkami-60-tbl.jpg" class="item d-block" data-fancybox="gallery" data-caption="Slovakiapharm VITAMIN C 1000mg so Sipkami tablety 60 ks">
-                            <img src="image/product/slovakiapharm-vitamin-c-1000mg-so-sipkami-60-tbl.jpg" class="d-block w-100 product-img" alt="Product Image">
-                        </a>
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="product-gallery-wrapper position-relative">
+                        <div class="product-gallery border owl-carousel owl-theme">
+                            <a href="image/product/slovakiapharm-vitamin-c-1000mg-so-sipkami-60-tbl.jpg" class="item d-block w-100" data-fancybox="gallery" data-caption="Slovakiapharm VITAMIN C 1000mg so Sipkami tablety 60 ks">
+                                <img src="image/product/slovakiapharm-vitamin-c-1000mg-so-sipkami-60-tbl.jpg" class="d-block w-100 product-img" alt="Product Image">
+                            </a>
+                        </div>
+                        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
                     </div>
-                    <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
                 </div>
                 <div class="col-md-6 position-relative d-flex align-items-center">
-                    <div class="product-details w-100 ps-5">
+                    <div class="product-details w-100 ps-lg-5">
                         <h5 class="single-product-title fw-bold mb-3">Slovakiapharm VITAMIN C 1000mg so Sipkami tablety 60 ks</h5>
                         <p class="product-ref mb-2">
                             <label class="fs-13 fw-semibold">Kód </label>
@@ -179,22 +181,22 @@
                         </div>
 
                         <div class="product-price-wrapper mb-2">
-                            <div class="row py-3">
-                                <div class="col-md-7">
-                                    <h3 class="product-price color-primary mb-0 text-center mb-0 fw-semibold">7,24 € </h3>
+                            <div class="row py-3 py-sm-2 py-lg-3">
+                                <div class="col-sm-4 col-xl-6">
+                                    <h2 class="product-price color-primary text-center mb-0 fw-semibold">7,24 € </h2>
                                 </div>
-                                <div class="col-md-5 d-flex align-items-center justify-content-center">
+                                <div class="col-sm-8 col-xl-6 d-flex align-items-center justify-content-center">
                                     <span class="product-availability-status"><i class="bi bi-check-circle-fill"></i> Skladom - ihned k odoslaniu</span>
                                 </div>
                             </div>
                         </div>
-                        <ul class="d-flex list-unstyled gap-3 mb-4">
+                        <ul class="d-flex flex-column flex-sm-row list-unstyled gap-2 mb-4">
                             <li><a href="#" class="text-decoration-none"><i class="bi bi-graph-down text-dark"></i> <span>História ceny</span></a></li>
                             <li><span class="fw-normal color-primary">NajniZSia cena za posledných 30 dní bola 7,24 €</span></li>
                         </ul>
 
                         <div class="add-cart-btn-wrapper">
-                            <ul class="d-flex list-unstyled justify-content-center align-items-center gap-3 mb-0">
+                            <ul class="d-flex list-unstyled justify-content-start align-items-center gap-3 mb-0">
                                 <li class="quantity-wrapper d-flex align-items-center border border-2 p-2">
                                     <a href="#" class="btn border-0 fs-5 p-0 color-primary product_quantity_down">
                                         <i class="bi bi-dash-circle-fill"></i>
@@ -345,7 +347,8 @@
                         <div class="product-card-2 p-3 pb-4 d-flex flex-column">
                             <a href="#" class="productss-img d-block text-center mb-2"><img class="w-100" src="image/product/la-roche-cicaplast-b5-serum-30-ml.jpg" alt=""></a>
                             <a href="#" class="text-decoration-none"><h5 class="product-title text-center mb-3">La roche cicaplast B5 sérum 30 ml</h5></a>
-                            <p class="product-desc text-center"></p>
+                            <p class="product-desc text-center">Vyzivový dopinok obsahujúci aminokyseliny, vytaky
+                                z rastlín, vitamíny a minerály. Obsahuje: výtazok z</p>
                             <div class="row">
                                 <div class="col-lg-6 d-flex align-items-center justify-content-center">
                                     <h4 class="product-price color-primary mb-0">32,34 €</h4>
@@ -547,6 +550,26 @@
                 items: 4,
                 loop: false,
                 margin: 10,
+                responsive: {
+                    0: {
+                        items: 1,
+                        loop: true
+                    },
+                    400: {
+                        items: 2,
+                        loop: true
+                    },
+                    600: {
+                        items: 3,
+                        loop: true
+                    },
+                    1000: {
+                        items:3,
+                    },
+                    1100: {
+                        items:4,
+                    },
+                },
             });
         });
     </script>
