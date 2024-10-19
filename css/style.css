@@ -528,7 +528,9 @@ li.item {
 .accordion-button.no-arrow::after {
     display: none !important;
 }
-
+.accordion-body {
+    padding: 15px;
+}
 .form-check {
     color: #777;
 }
@@ -609,11 +611,30 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .page-link:focus{
     box-shadow: unset;
 }
-.page-link.active{
+.page-link {
+    color: var(--web-primary);
+    border: var(--bs-pagination-border-width) solid var(--web-primary);
+}
+.page-link.active, .page-link:hover{
     background-color: var(--web-primary);
     color: #FFF;
-    border: var(--web-primary);
+    border: var(--bs-pagination-border-width) solid var(--web-primary);
 }
+.page-link.bg-transparent:hover, .page-link.bg-transparent:focus {
+    color: var(--web-primary);
+}
+.fixed-bottom{
+    width: var(--bs-offcanvas-width);
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+.filter-button{
+    font-size: 16px;
+    color: #10304f;
+    background-color: #e5f6fd;
+    border: 2px solid var(--web-primary);
+    border-radius: 5px;
+}
+
 .list-block li a:before {
     content: "\f105";
     display: inline;
@@ -712,7 +733,10 @@ footer a {
     li.breadcrumb-item {
         font-size: 10px;
     }
-
+    .breadcrumb-item+.breadcrumb-item::before {
+        height: 13px;
+        margin-top: 4px;
+    }
     h5.single-product-title {
         font-size: 18px;
     }
@@ -729,6 +753,26 @@ footer a {
     h2.product-price {
         font-size: 22px;
     }
+
+    #offcanvasFilter{
+        max-height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .accordion-item{
+        border: unset;
+        border-bottom: 1px solid #dee2e6;
+    }
+    .sub-category-wrapper ul {
+        gap: 12px;
+    }
+
+    .sub-category-wrapper ul li{
+        flex-grow: 1;
+        text-align: center;
+    }
+
 }
 
 @media (max-width:767px) {
@@ -789,6 +833,23 @@ footer a {
         max-width: 300px;
         margin: auto;
     }
+
+    .subCitems {
+        font-size: 13px;
+    }
+    .sub-category-wrapper ul {
+        gap: 8px;
+    }
+    .product-grid .product-desc{
+        display: none;
+    }
+    .product-grid h5.product-title{
+        font-size: 12px;
+        min-height: 30px;
+        margin-bottom: 10px !important;
+    }
+
+
 }
 
 @media (max-width: 590px) {
@@ -805,6 +866,18 @@ footer a {
     section.cta-footer-top h4 {
         font-size: 14px;
     }
+    .subCitems {
+        font-size: 12px;
+    }
+    .cta-footer-top span br{
+        display: none;
+    }
+    .cta-footer-top span{
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
 }
 
 @media (max-width: 390px) {
