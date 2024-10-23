@@ -781,6 +781,7 @@ footer a {
 
     .navbar-brand {
         max-width: 200px;
+        line-height: 0;
     }
 
     .s-image {
@@ -838,6 +839,10 @@ footer a {
         font-size: 12px;
         min-height: 30px;
         margin-bottom: 10px !important;
+    }
+
+    div#offcanvasNavbar {
+        max-width: 70%;
     }
 }
 
